@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.frb.engine"
+    namespace = "com.rinn.engine"
     compileSdk = 36
 
     defaultConfig {
