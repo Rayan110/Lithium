@@ -26,8 +26,10 @@ jobs:
     - name: Accept Android SDK Licenses
       run: yes | sdkmanager --licenses
 
-    - name: Install SDK Build Tools (Stable)
-      run: sdkmanager "build-tools;34.0.0" "platforms;android-34" "platform-tools"
+    - name: Install SDK Build Tools + CMake + NDK
+      run: |
+        sdkmanager "build-tools;34.0.0" "platforms;android-34" "platform-tools"
+        sdkmanager "cmake;3.31.0" "ndk;26.3.11579264"
 
     - name: Fix missing AIDL dependencies
       run: |
